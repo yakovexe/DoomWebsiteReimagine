@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Orbitron:wght@400..900&display=swap");
+
+.button-primary {
+  width: fit-content;
+  height: 2.5rem;
+  min-width: 10rem;
+  cursor: pointer;
+  background: none;
+  border: solid 1px #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.button-primary:hover {
+  background-color: #fff;
+  transition: 0.4s ease-in-out;
+  color: #000;
+}
+
+.button-secondary {
+  background: none;
+}
+
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.menu-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  margin: 8px 0;
+  transition: 0.4s;
+}
+.change .bar-1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar-2 {
+  opacity: 0;
+}
+.change .bar-3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
