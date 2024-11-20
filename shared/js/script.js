@@ -1,10 +1,6 @@
-const menu = document.querySelector(".menu-navigation");
-
-scrollableDiv.addEventListener("wheel", (e) => {
-  e.stopPropagation();
-});
-
 function toggleMenuNavigation(button) {
+  const menu = document.querySelector(".menu-navigation");
+
   toggleMenuButton(button);
 
   if (menu.style.visibility === "visible") {

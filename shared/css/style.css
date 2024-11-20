@@ -1,9 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+/* ---------------------------- DEFAULTS/RESET ----------------------------- */
+body {
+  width: 100vw;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ------------------------------- HEADINGS -------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Orbitron", sans-serif;
+}
+
+/* ------------------------------- FX CLASSES ------------------------------ */
+.fade-section {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+}
 
 ::-webkit-scrollbar {
   display: none;
 }
 
+/* ------------------------------- BUTTONS --------------------------------- */
 .button-primary {
   width: fit-content;
   height: 2.5rem;
@@ -29,6 +60,7 @@
   background: none;
 }
 
+/* --------------------------------- ICONS --------------------------------- */
 .menu-icon {
   display: inline-block;
   cursor: pointer;
@@ -53,6 +85,7 @@
   transform: translate(0, -11px) rotate(45deg);
 }
 
+/* -------------------------------- MENUS ---------------------------------- */
 .menu-navigation {
   min-height: 100vh;
   max-height: 900px;
@@ -108,7 +141,6 @@
 .menu-navigation-social-media img:hover {
   width: 2.25rem;
 }
-
 .menu-navigation-bottom {
   height: 90%;
   width: 100%;
@@ -136,6 +168,7 @@
   color: #9f1700;
 }
 
+/* -------------------------------- MOBILE --------------------------------- */
 /* TODO: refatorar para que sejam necessárias menos media-queries */
 @media (max-width: 1735px) {
   .menu-navigation-top {

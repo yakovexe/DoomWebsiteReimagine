@@ -10,7 +10,6 @@
   </head>
 
   <body>
-    <!-- header com menu lateral, logo produtora, logo jogo, botao slayersclub, cadastro/login -->
     <header class="header-navigation">
       <div class="header-navigation-left">
         <div class="menu-icon" onclick="toggleMenuNavigation(this)">
@@ -36,7 +35,6 @@
       </div>
     </header>
 
-    <!-- menu lateral de navegação -->
     <nav class="menu-navigation">
       <div class="menu-navigation-top">
         <div class="menu-navigation-logo">
@@ -138,51 +136,77 @@
       </div>
     </nav>
 
-    <div class="nav-menu"></div>
-    <!-- imagem grande do jogo, tipo wallpaper -->
-    <main class="banner">
-      <!-- link para trailer, botão para comprar (leva para seção inferior de compras) -->
-      <div class="banner-buttons">
-        <a href="/">
-          <button class="button-banner">
+    <main>
+      <section class="hero-section fade-section">
+        <div class="hero-section-buttons">
+          <a href="/">
+            <button class="button-special">
+              <img
+                src="assets/images/icons/play_button.png"
+                alt="Play Button"
+              />Confira o trailer
+            </button>
+          </a>
+          <a href="/">
+            <button class="button-special">Comprar agora</button>
+          </a>
+        </div>
+      </section>
+
+      <section class="presentation-section fade-section">
+        <div class="presentation-section-text">
+          <h1>Destrua o Inferno</h1>
+          <p>
+            Os exércitos do Inferno invadiram a Terra. Torne-se o Slayer em uma
+            campanha épica para um jogador e derrote demônios entre dimensões
+            para impedir a derradeira destruição da humanidade.
+          </p>
+          <h2>A única coisa que eles temem... é você.</h2>
+          <p>
+            Viva a combinação suprema de velocidade e poder em DOOM Eternal - o
+            próximo avanço de combate acelerado em primeira pessoa. Descubra as
+            origens do Slayer e sua eterna missão de DESTRUIR O INFERNO.
+          </p>
+        </div>
+      </section>
+
+      <section class="screenshots-section fade-section">
+        <div class="slider-wrapper">
+          <div class="slider">
             <img
-              src="assets/images/icons/play_button.png"
-              alt="Play Button"
-            />Confira o trailer
-          </button>
-        </a>
-        <a href="/">
-          <button class="button-banner">Comprar agora</button>
-        </a>
-      </div>
+              src="assets/images/doom_eternal_bionic_enemy.jpg"
+              alt="Doom Eternal bionic enemy screenshot"
+              id="slide-1"
+            />
+            <img
+              src="assets/images/doom_eternal_doom_guy.png"
+              alt="Doom Eternal doom guy screenshot"
+              id="slide-2"
+            />
+            <img
+              src="assets/images/doom_eternal_first_person_gameplay.png"
+              alt="Doom Eternal first-person gameplay screenshot"
+              id="slide-3"
+            />
+            <img
+              src="assets/images/doom_eternal_sentinel_prime.jpg"
+              alt="Doom Eternal sentinel prime scenario screenshot"
+              id="slide-4"
+            />
+          </div>
+          <div class="slider-nav">
+            <a href="#slide1" class="slider-nav-button"></a>
+            <a href="#slide2" class="slider-nav-button"></a>
+            <a href="#slide3" class="slider-nav-button"></a>
+            <a href="#slide4" class="slider-nav-button"></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="shopping-section fade-section"></section>
     </main>
 
-    <!-- carrossel de prints do jogo -->
-    <div class="presentation">
-      <div class="presentation-text">
-        <h1>Destrua o Inferno</h1>
-        <p>
-          Os exércitos do Inferno invadiram a Terra. Torne-se o Slayer em uma
-          campanha épica para um jogador e derrote demônios entre dimensões para
-          impedir a derradeira destruição da humanidade.
-        </p>
-        <h2>A única coisa que eles temem... é você.</h2>
-        <p>
-          Viva a combinação suprema de velocidade e poder em DOOM Eternal - o
-          próximo avanço de combate acelerado em primeira pessoa. Descubra as
-          origens do Slayer e sua eterna missão de DESTRUIR O INFERNO.
-        </p>
-      </div>
-    </div>
-
-    <!-- sessão de links para paginas das dlcs e pagina de produtos -->
-
-    <div class="shopping"></div>
-    <!-- sessão de compras contém links para as plataformas Xbox, Playstation, Nintendo, Steam -->
     <footer></footer>
-    <!-- footer em duas partes
-    primeira: explorar, suporte, informações legais
-    segunda: logo, rating, copyright -->
     <script src="index.html.js"></script>
     <script src="shared/js/script.js"></script>
   </body>
