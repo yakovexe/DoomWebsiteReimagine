@@ -1,13 +1,3 @@
-window.addEventListener("load", () => {
-  const banner = document.querySelector(".banner");
-
-  if (banner) {
-    setTimeout(() => {
-      banner.classList.add("fade-in");
-    }, 200);
-  }
-});
-
 const menu = document.querySelector(".menu-navigation");
 
 scrollableDiv.addEventListener("wheel", (e) => {

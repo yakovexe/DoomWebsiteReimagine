@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
+/* TODO: Checar se existem trechos reutilizáveis para migrar para shared/css/style.css */
+/* TODO: Definir um arquivo compartilhado de reset de componentes CSS */
+
 body {
   width: 100%;
   margin: 0;
@@ -13,7 +16,7 @@ body {
   justify-content: center;
   align-items: flex-end;
   padding: 0 1rem;
-  background: no-repeat top/cover url("doom_eternal_banner.png");
+  background: no-repeat top/cover url("assets/images/doom_eternal_banner.png");
   opacity: 0;
   transition: 0.8s;
   box-sizing: border-box;
@@ -86,7 +89,7 @@ body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to left, transparent, rgba(0, 0, 0, 1)),
-    no-repeat top/cover url("doom_eternal_banner_alt.jpg");
+    no-repeat top/cover url("assets/images/doom_eternal_banner_alt.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,7 +141,7 @@ h2 {
 
   .presentation {
     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1)),
-      no-repeat top/cover url("doom_eternal_banner_alt.jpg");
+      no-repeat top/cover url("assets/images/doom_eternal_banner_alt.jpg");
     justify-content: end;
   }
 

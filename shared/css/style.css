@@ -136,6 +136,7 @@
   color: #9f1700;
 }
 
+/* TODO: refatorar para que sejam necessárias menos media-queries */
 @media (max-width: 1735px) {
   .menu-navigation-top {
     height: fit-content;
