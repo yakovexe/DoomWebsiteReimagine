@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Orbitron:wght@400..900&display=swap");
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .button-primary {
   width: fit-content;
   height: 2.5rem;
@@ -29,6 +33,8 @@
   display: inline-block;
   cursor: pointer;
   margin-right: 1rem;
+  z-index: 4;
+  position: relative;
 }
 .menu-icon div {
   width: 35px;
@@ -45,4 +51,150 @@
 }
 .change .bar-3 {
   transform: translate(0, -11px) rotate(45deg);
+}
+
+.menu-navigation {
+  min-height: 100vh;
+  max-height: 900px;
+  width: 40vw;
+  max-width: 100%;
+  margin: 3.75rem 0 0 0;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transform: translate(-100%);
+  transition: 0.4s;
+  z-index: 2;
+  padding: 0 5rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.menu-navigation h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.menu-navigation-top {
+  width: 100%;
+  height: 5rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+}
+.menu-navigation-logo {
+  height: 5rem;
+  width: 50%;
+  display: inherit;
+  align-items: center;
+}
+.menu-navigation-social-media {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu-navigation-social-media img {
+  width: 2rem;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.menu-navigation-social-media img:hover {
+  width: 2.25rem;
+}
+
+.menu-navigation-bottom {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.menu-navigation-column-left {
+  width: 50%;
+}
+.menu-navigation-column-right {
+  width: 50%;
+}
+.menu-navigation-bottom ul {
+  list-style: none;
+  padding: 0;
+}
+.menu-navigation-bottom li {
+  line-height: 2rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.menu-navigation-bottom li:hover {
+  font-weight: 600;
+  color: #9f1700;
+}
+
+@media (max-width: 1735px) {
+  .menu-navigation-top {
+    height: fit-content;
+    flex-direction: column;
+  }
+  .menu-navigation-social-media {
+    width: 100%;
+    height: 50%;
+  }
+}
+@media (max-width: 1080px) {
+  .menu-navigation {
+    width: 100%;
+    height: 800;
+  }
+  .menu-navigation-social-media {
+    justify-content: start;
+  }
+  .menu-navigation-social-media img {
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 790px) {
+  .menu-navigation-bottom {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-navigation-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 100px;
+    overflow-y: scroll;
+  }
+
+  .menu-navigation-column-left,
+  .menu-navigation-column-right {
+    width: 100%;
+  }
+
+  .menu-navigation h1 {
+    font-size: 1rem;
+  }
+
+  .menu-navigation ul {
+    padding-left: 1rem;
+  }
+
+  .menu-navigation li {
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (width: 375px) {
+  .menu-navigation-bottom {
+    padding-bottom: 300px;
+  }
 }
