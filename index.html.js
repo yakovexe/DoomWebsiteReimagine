@@ -38,19 +38,58 @@ window.addEventListener("wheel", (event) => {
 });
 
 const slider = document.querySelector(".slider");
-const navButtons = document.querySelectorAll(".slider-nav-button");
+const slides = document.querySelectorAll(".slider img");
+const navButtons = document.querySelectorAll(".slider-nav a");
 
+let currentIndex = 0; // Slide atual
+let startX = 0; // Posição inicial do toque
+
+// Função para mover o slider
+function moveToSlide(index) {
+  // Limitar o índice para evitar valores fora do intervalo
+  currentIndex = Math.max(0, Math.min(index, slides.length - 1));
+
+  // Atualizar a posição do slider
+  slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
+
+  // Atualizar os botões de navegação
+  updateNavButtons(currentIndex);
+}
+
+// Função para atualizar a classe ativa nos botões de navegação
+function updateNavButtons(activeIndex) {
+  navButtons.forEach((btn, index) => {
+    if (index === activeIndex) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+}
+
+// Clique nos botões de navegação
 navButtons.forEach((btn, index) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    // Move o slider para o índice clicado
-    slider.style.transform = `translateX(-${index * 100}vw)`;
-
-    // Atualiza a classe ativa no botão de navegação
-    navButtons.forEach((btn) => btn.classList.remove("active"));
-    btn.classList.add("active");
+    moveToSlide(index);
   });
 });
 
-// Define o botão inicial como ativo
-navButtons[0].classList.add("active");
+// Capturar o início do toque
+slider.addEventListener("touchstart", (event) => {
+  startX = event.touches[0].clientX; // Coordenada inicial do toque
+});
+
+// Detectar o movimento do toque
+slider.addEventListener("touchend", (event) => {
+  const endX = event.changedTouches[0].clientX; // Coordenada final do toque
+  const diffX = startX - endX;
+
+  if (diffX > 50) {
+    // Deslize para a esquerda (próximo slide)
+    moveToSlide(currentIndex + 1);
+  } else if (diffX < -50) {
+    // Deslize para a direita (slide anterior)
+    moveToSlide(currentIndex - 1);
+  }
+});
