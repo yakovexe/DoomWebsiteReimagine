@@ -78,6 +78,7 @@ function moveToSlide(index) {
   // Atualizar os botões de navegação
   updateNavButtons(currentIndexX);
 }
+navButtons[0].classList.add("active");
 
 // Função para atualizar a classe ativa nos botões de navegação
 function updateNavButtons(activeIndex) {
