@@ -109,10 +109,10 @@ slider.addEventListener("touchend", (event) => {
   const endX = event.changedTouches[0].clientX; // Coordenada final do toque
   const diffX = startX - endX;
 
-  if (diffX > 200) {
+  if (diffX > 100) {
     // Deslize para a esquerda (próximo slide)
     moveToSlide(currentIndexX + 1);
-  } else if (diffX < -200) {
+  } else if (diffX < -100) {
     // Deslize para a direita (slide anterior)
     moveToSlide(currentIndexX - 1);
   }
