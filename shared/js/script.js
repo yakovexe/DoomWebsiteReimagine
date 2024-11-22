@@ -15,3 +15,13 @@ function toggleMenuNavigation(button) {
 function toggleMenuButton(button) {
   button.classList.toggle("change");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navMenu = document.querySelector(".menu-navigation");
+
+  // Prevent scrolling or touch propagation to the rest of the page
+  navMenu.addEventListener("wheel", (event) => {
+    event.stopPropagation(); // Prevents propagation to the page
+    event.preventDefault();
+  });
+});
