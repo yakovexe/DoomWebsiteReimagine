@@ -99,8 +99,8 @@ h6 {
   border: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  background: #fff;
+  color: #000;
   transform: translate(-100%);
   transition: 0.4s;
   z-index: 2;
@@ -138,7 +138,6 @@ h6 {
 }
 .menu-navigation-social-media img {
   width: 2rem;
-  filter: invert(100%);
   cursor: pointer;
   transition: 0.4s;
 }
