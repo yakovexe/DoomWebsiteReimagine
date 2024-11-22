@@ -103,6 +103,8 @@ section {
 }
 .shopping-card {
   width: 90%;
+  height: fit-content;
+  margin-top: 5rem;
 }
 .edition-selection {
   border-radius: 3px 3px 0 0;
@@ -135,6 +137,53 @@ section {
   opacity: 0;
   width: 0;
   height: 0;
+}
+.platforms h2 {
+  text-transform: uppercase;
+}
+.platform-links {
+}
+.platform-button {
+  height: 100%;
+  width: 48%;
+  padding: 1rem 2rem;
+  margin: 2px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1rem;
+}
+.platform-button img {
+  width: 1rem;
+  filter: invert(100%);
+}
+#xbox {
+  background: hsl(119, 81%, 26%);
+}
+#xbox:hover {
+  background: hsl(119, 81%, 21%);
+}
+#playstation {
+  background: hsl(226, 68%, 31%);
+}
+#playstation:hover {
+  background: hsl(226, 68%, 26%);
+}
+#nintendo {
+  background: hsl(355, 100%, 45%);
+}
+#nintendo:hover {
+  background: hsl(355, 100%, 40%);
+}
+#steam {
+  background: hsl(196, 100%, 34%);
+}
+#steam:hover {
+  background: hsl(196, 100%, 29%);
 }
 .shopping-section-right {
   display: inherit;
@@ -227,6 +276,16 @@ section {
   transition: 0.4s;
 }
 
+@media (min-width: 960px) and (max-width: 1080px) {
+  .platform-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .platform-button {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .shopping-section-left {
     width: 100%;
@@ -277,5 +336,39 @@ section {
   .slider-nav-button {
     width: 1.25rem;
     height: 1.25rem;
+  }
+
+  .platform-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .platform-button {
+    width: 100%;
+  }
+
+  .edition-selector,
+  .edition-content,
+  .edition-selection {
+    padding: 0.5rem;
+  }
+
+  .edition-selection {
+    height: auto;
+  }
+
+  .edition-selector,
+  .shopping-card {
+    font-size: 0.9rem;
+  }
+
+  .shopping-card h1,
+  .shopping-card h2,
+  .shopping-card p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .platform-button {
+    padding: 0.5rem;
   }
 }
